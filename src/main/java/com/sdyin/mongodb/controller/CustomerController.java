@@ -27,6 +27,14 @@ public class CustomerController {
 
   @RequestMapping("/queryCustomer")
   public void query(){
+    for (Customer customer : customerRepository.findAll()) {
+      System.out.println(customer);
+    }
+  }
 
+  @RequestMapping("/queryByFirstName")
+  public void queryByFirsrName(){
+    Customer customer = customerRepository.findByFirstName("sdyin");
+    System.out.println(customer);
   }
 }
