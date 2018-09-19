@@ -37,4 +37,8 @@ public class CustomerController {
     Customer customer = customerRepository.findByFirstName("sdyin");
     System.out.println(customer);
   }
+
+  public void test(){
+
+  }
 }
