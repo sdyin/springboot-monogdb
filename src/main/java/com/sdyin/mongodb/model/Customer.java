@@ -15,6 +15,7 @@ public class Customer {
   public Integer id;
   public String firstName;
   public String lastName;
+  public String nickName;
 
   public Customer(Integer id, String firstName, String lastName) {
     this.id = id;
