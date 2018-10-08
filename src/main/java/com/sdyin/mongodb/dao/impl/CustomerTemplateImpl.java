@@ -23,6 +23,14 @@ public class CustomerTemplateImpl implements CustomerTemplate {
   @Autowired
   MongoTemplate mongoTemplate;
 
+  /**
+   * 新增客户
+   * @param customer
+   */
+  public void insertCustomer(Customer customer) {
+    mongoTemplate.insert(customer);
+  }
+
   @Override
   public List<Customer> queryByCondition(Query query) {
     List<Customer> customers = mongoTemplate.find(query, Customer.class);
