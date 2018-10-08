@@ -27,4 +27,9 @@ public interface CustomerTemplate {
    * @return
    */
   Long updateByCondition(Query query, Update update, String collectionName);
+
+  /**
+   * 根据条件删除
+   */
+  Long delByCondition(Query query);
 }

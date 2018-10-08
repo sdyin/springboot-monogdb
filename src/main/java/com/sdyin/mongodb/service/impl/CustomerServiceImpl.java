@@ -30,4 +30,11 @@ public class CustomerServiceImpl implements ICustomerService {
     List<Customer> customers = customerTemplate.queryByCondition(query);
     return customers;
   }
+
+  @Override
+  public Long delByCondition(String nickName) {
+    Query query = new Query(Criteria.where("nickName").is(nickName));
+    Long count = customerTemplate.delByCondition(query);
+    return count;
+  }
 }

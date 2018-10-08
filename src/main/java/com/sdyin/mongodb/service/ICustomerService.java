@@ -16,4 +16,10 @@ public interface ICustomerService {
    * @param nickName
    */
   List<Customer> queryByCondition(String nickName);
+
+  /**
+   * 根据条件删除
+   * @param nickName
+   */
+  Long delByCondition(String nickName);
 }

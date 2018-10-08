@@ -51,4 +51,10 @@ public class CustomerController {
     List<Customer> customers = customerService.queryByCondition(nickName);
     return JSON.toJSONString(customers);
   }
+
+  @GetMapping("/delByCondition")
+  public String delByCondition(@RequestParam("nickName") String nickName){
+    Long count = customerService.delByCondition(nickName);
+    return count.toString();
+  }
 }
